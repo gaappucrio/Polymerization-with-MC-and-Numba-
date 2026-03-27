@@ -60,7 +60,7 @@ Use the comparison script to validate the stochastic results against the provide
 
 ```bash
 python Graf_comparison.py
-```bash
+```
 Performance Impact
 By using the Numba-optimized approach, this project achieves execution speeds comparable to C++ while maintaining the flexibility of Python. This allows for the simulation of larger molecular systems and longer reaction times that would be computationally prohibitive in pure Python.
 
