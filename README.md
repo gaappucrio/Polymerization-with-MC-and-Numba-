@@ -1,5 +1,7 @@
 # Polymerization with Kinetic Monte Carlo and Numba
 
+Access the paper at: https://dx.doi.org/10.1021/acs.iecr.0c01069
+
 This repository provides a high-performance implementation of **Kinetic Monte Carlo (KMC)** simulations for polymerization processes, specifically focused on the thermal polymerization of styrene. The project explores optimization techniques in Python, comparing standard execution with Just-In-Time (JIT) compilation using **Numba** to achieve significant speedups.
 
 ## Project Overview
