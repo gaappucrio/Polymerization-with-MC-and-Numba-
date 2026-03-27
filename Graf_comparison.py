@@ -1,0 +1,45 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+conversion = np.loadtxt('conversion.txt', dtype=float, unpack=True)
+monomer = np.loadtxt('monomer.txt', dtype=float, unpack=True)
+initiator = np.loadtxt('initiator.txt', dtype=float, unpack=True)
+
+moments_conversion = np.loadtxt('Moments_article.txt', dtype=float, unpack=True)
+moments_monomer = np.loadtxt('Moments_article_monomer.txt', dtype=float, unpack=True)
+moments_initiator = np.loadtxt('Moments_article_initiator.txt', dtype=float, unpack=True)
+
+plt.figure(1)
+plt.plot(conversion[0,:], conversion[1,:], 'k-', lw=1)
+plt.plot(moments_conversion[0,:], moments_conversion[1,:], 'ko', ms=4)
+plt.xlim(left=0, right=250)
+plt.ylim(bottom=0, top=1)
+plt.xlabel('time (min)', fontsize=14)
+plt.ylabel('$X$', fontsize=14)
+plt.grid(True)
+plt.legend(['This work','Maafa et al. (2007)'], fontsize=14, loc=4)
+plt.savefig('conversion.eps', format='eps', dpi=1000)
+
+
+plt.figure(2, figsize=(12.8, 4.8))
+plt.subplot(121)
+plt.plot(monomer[0,:], monomer[1,:], 'k-', lw=1)
+plt.plot(moments_monomer[0,:], moments_monomer[1,:], 'ko', ms=4)
+plt.xlim(left=0, right=1)
+plt.ylim(bottom=0, top=9)
+plt.xlabel('$X$', fontsize=14)
+plt.ylabel('$[M]$ (mol.L$^{-1}$)', fontsize=14)
+plt.grid(True)
+plt.legend(['This work','Maafa et al. (2007)'], fontsize=14, loc=1)
+
+plt.subplot(122)
+plt.plot(initiator[0,:], initiator[1,:], 'k-', lw=1)
+plt.plot(moments_initiator[0,:], moments_initiator[1,:], 'ko', ms=4)
+plt.xlim(left=0, right=1)
+plt.ylim(bottom=0, top=0.012)
+plt.xlabel('$X$', fontsize=14)
+plt.ylabel('$[I]$ (mol.L$^{-1}$)', fontsize=14)
+plt.grid(True)
+plt.legend(['This work','Maafa et al. (2007)'], fontsize=14, loc=1)
+plt.savefig('monomer-initiator.eps', format='eps', dpi=1000)
+plt.show()
