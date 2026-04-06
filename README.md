@@ -40,6 +40,10 @@ To run the simulations, ensure you have the following installed:
 Install dependencies via pip:
 ```bash
 pip install numpy matplotlib numba
+
+# Clone the repository
+git clone https://github.com/gaappucrio/Polymerization-with-MC-and-Numba-.git
+cd Polymerization-with-MC-and-Numba-
 ```
 
 How to Use
